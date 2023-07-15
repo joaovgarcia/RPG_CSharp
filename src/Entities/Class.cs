@@ -41,6 +41,35 @@ namespace RPG_POO_CS.src.Entities
 
         }
 
+
+         public string ClassOption(string option) 
+        {
+            Game game = new Game();
+            
+                switch (option)
+                {
+                    case "THIEF":
+                        option = game.Texts(7);
+                    break;
+
+                    case "MAGE":
+                        option = game.Texts(9);
+                    break;
+
+                    case "KNIGHT":
+                        option = game.Texts(8);
+                    break;
+
+
+                    default: 
+                         Console.WriteLine("It seems that this class hasn't been discovered yet!");
+                    break;
+                }
+    
+            return option;
+        } 
+
+
   
     }
 }
